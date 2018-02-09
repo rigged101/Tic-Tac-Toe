@@ -136,11 +136,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="BoardState.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NodeClass.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Cell.h" />
+    <ClInclude Include="BoardState.h" />
+    <ClInclude Include="NodeClass.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -149,6 +151,8 @@
   <ImportGroup Label="ExtensionTargets">
     <Import Project="..\packages\AllegroDeps.1.4.0.0\build\native\AllegroDeps.targets" Condition="Exists('..\packages\AllegroDeps.1.4.0.0\build\native\AllegroDeps.targets')" />
     <Import Project="..\packages\Allegro.5.2.1.1\build\native\Allegro.targets" Condition="Exists('..\packages\Allegro.5.2.1.1\build\native\Allegro.targets')" />
+    <Import Project="..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets" Condition="Exists('..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" />
+    <Import Project="..\packages\sdl2.2.0.5\build\native\sdl2.targets" Condition="Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -156,5 +160,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\AllegroDeps.1.4.0.0\build\native\AllegroDeps.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\AllegroDeps.1.4.0.0\build\native\AllegroDeps.targets'))" />
     <Error Condition="!Exists('..\packages\Allegro.5.2.1.1\build\native\Allegro.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Allegro.5.2.1.1\build\native\Allegro.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.redist.2.0.5\build\native\sdl2.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\sdl2.2.0.5\build\native\sdl2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sdl2.2.0.5\build\native\sdl2.targets'))" />
   </Target>
 </Project>
